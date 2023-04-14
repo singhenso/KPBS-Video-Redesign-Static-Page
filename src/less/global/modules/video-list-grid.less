@@ -15,6 +15,7 @@ Video List Grid
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 35px;
 
         &-title {}
 
@@ -39,6 +40,14 @@ Video List Grid
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 30px;
+        .max-width-mixin(@tablet; {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        });
+        .max-width-mixin(@mobile; {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        });
 
         &-card {
             &-picture {
@@ -79,10 +88,9 @@ Video List Grid
 
                     svg {
                         position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 3;
+                        bottom: 10px;
+                        left: 10px;
+                        z-index: 4;
                     }
                 }
             }
