@@ -88,9 +88,24 @@ Video Hero
             }
 
             &-content {
-                &-time {}
+                &-time {
+                    display: flex;
+                    flex-direction: row;
+                    gap:7px;
+                    align-items: center;
+                    a {
+                        color: #6AB1ED;
+                        font-weight: 700;
+                    }
+                }
                 h3 {
                     font-size: 30px;
+                    .max-width-mixin(@tablet; {
+                        font-size: 24px;
+                    });
+                    .max-width-mixin(@mobile; {
+                        font-size: 20px;
+                    });
                 }
 
             }
@@ -171,14 +186,30 @@ Video Hero
 
                 &-content {
                     font-weight: bold;
+                    display: flex;
+                    flex-direction: column;
+                    &-time {
+                        display: flex;
+                        flex-direction: row;
+                        gap:7px;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        a {
+                            color: #6AB1ED;
+                            font-weight: 700;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
                     p:nth-child(1) {
                         margin: 0;
                         font-weight: normal;
                     }
-                    p:nth-child(2) {
-                        margin: 10px 0 0 0;
-                    }
                 }
+            }
+            &-more {
+                font-weight: 700;
             }
         }
     }
