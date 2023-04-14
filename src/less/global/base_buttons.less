@@ -1,0 +1,195 @@
+/* =========== STARTbase remove kpbs stlye.css elements ===========*/
+
+.pc-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    font-family: Roboto;
+}
+
+
+
+/* =========== END base remove kpbs stlye.css elements ===========*/
+@primary-purple: #0B135C;
+@primary-green: #33A99D;
+@primary-blue: #006cb4;
+@btn-border: 1px solid #2638C4;
+@btn-purple: #2638C4;
+@text-blue: #2638C4;
+@primary-purple-gradient: radial-gradient(55em 60em at -97% 50%, #0B135C 50%, transparent 50%);
+@primary-grey-bg: #FAFAFA;
+@min-height: 440px;
+@circle-width: 400px;
+@overlay: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
+@grey-bg: #FAFAFA;
+
+
+
+/* 
+=====================================================================
+Media Queries
+=====================================================================
+*/
+// Mixin for max-width media queries
+.max-width-mixin(@width; @rules) {
+    @media (max-width: @width) {
+        @rules();
+    }
+}
+
+// Define breakpoints
+@mobile: 425px;
+@tablet: 768px;
+
+/*
+  .wrapper {
+  // Your base styles here
+
+  .element {
+    // Your element base styles here
+
+    // Mobile media query
+    .max-width-mixin(@mobile; {
+      // Your mobile styles here
+    });
+
+    // Tablet media query
+    .max-width-mixin(@tablet; {
+      // Your tablet styles here
+    });
+  }
+}
+*/
+
+
+
+/* 
+=====================================================================
+button block
+=====================================================================
+*/
+.arrow-btn {
+    border-radius: 6px;
+    background-clip: padding-box;
+    font-size: 1.125em;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 25px;
+    border: @btn-border;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    cursor: pointer;
+
+    a {
+        cursor: pointer;
+    }
+
+    svg {
+        position: relative;
+        transition: right 0.2s ease 0s;
+        right: 4px;
+    }
+
+    &:hover {
+        box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+        color: #fff;
+
+
+        svg {
+            right: 0px;
+            position: relative;
+        }
+    }
+
+    svg {
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    &.white-arrow-btn {
+        background-color: #fff;
+        color: @text-blue;
+    }
+
+    // purple
+    &.purple-arrow-btn {
+        background-color: @btn-purple;
+        color: #fff;
+        border: none;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    // blue
+    &.blue-arrow-btn {
+        background-color: @primary-blue;
+        color: #fff;
+        border: none;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    // green
+    &.green-arrow-btn {
+        background-color: @primary-green;
+        color: #fff;
+        border: none;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+    // green
+    &.fb-arrow-btn {
+        background-color:#fff;
+        color: @primary-blue;
+        border: none;
+        transition: all 0.3s ease 0s;
+        svg {
+            transition: none !important;
+            right: 0px;
+            path {
+                fill: #fff;
+            }
+            &:hover {
+                box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+                color: #fff;
+        
+        
+                svg {
+                    right: 4px !;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+    &.transparent-arrow-btn {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+
+        
+        }
+    }
+}
+
+.pc-container a {
+    color:#005690;
+}

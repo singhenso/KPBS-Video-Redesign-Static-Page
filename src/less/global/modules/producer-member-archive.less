@@ -1,0 +1,409 @@
+/* 
+=====================================================================
+Member Archive
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+@import "src/less/global/modules/producer-giving.less";
+
+@border_color_1: transparent transparent transparent #fff;
+@border_color_2: transparent transparent transparent #ffffff;
+@border_color_3: #252525;
+@border_color_4: transparent transparent transparent #252525;
+
+
+
+.producer-member-archive {
+
+    &__header {
+        padding: 60px 0px;
+
+
+        .max-width-mixin(@tablet; {
+                padding: 30px 0px;
+            });
+            .producer-giving__cta  {
+                margin-top:30px;
+            }
+    }
+
+    &__virtual {
+        padding: 60px 0px;
+        background-color: @grey-bg;
+
+        .max-width-mixin(@tablet; {
+                padding: 30px 0px;
+            });
+
+        &__wrapper {
+            >ul {
+                display: grid;
+                grid-gap: 30px;
+            }
+
+            &__heading {
+                margin-bottom: 30px;
+
+
+            }
+        }
+
+    }
+    &__cta {
+        padding: 60px 0px;
+        padding-left: 20px;
+        padding-right: 20px;        
+
+        &__slideshow {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 30px;
+            margin-bottom: 30px;
+            .max-width-mixin(@mobile; {
+                grid-template-columns: 1fr;
+            });
+            img {
+                border-radius: 6px;
+            }
+            
+        }
+        &__content {}
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-gap: 30px;
+        background-color: #fff;
+        border-radius: 6px;
+        border: 1px solid #cecece;
+        .max-width-mixin(@tablet; {
+            grid-template-columns: 1fr 1fr;
+        });
+        .max-width-mixin(@mobile; {
+            grid-template-columns: 1fr;
+        });
+
+        &__video {}
+
+        &__text {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            &__heading {
+                span {
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                    ;
+                    display: block;
+                    font-size: 16px;
+                    color: #6F6F6F;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &__summary {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @background_color_1: #000;
+    @background_color_2: transparent;
+    @border_color_1: #f00;
+    @border_left_color_1: #f00;
+
+    .video_wrapper {
+        // width: 560px;
+        margin: 0 auto;
+        position: relative;
+        background-color: @background_color_1;
+
+        .videoPoster {
+            border-radius: 6px 0 0 6px;
+            .max-width-mixin(@mobile; {
+                border-radius: 6px 6px 0 0;
+            });
+        }
+    }
+
+    .video_wrapper_full {
+        padding-top: 200px;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .videoIframe {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: @background_color_2;
+    }
+
+    .videoPoster {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://placehold.jp/500x500.png);
+        border: none;
+        text-indent: -999em;
+        overflow: hidden;
+        opacity: 1;
+        -webkit-transition: opacity 800ms, height 0s;
+        -moz-transition: opacity 800ms, height 0s;
+        transition: opacity 800ms, height 0s;
+        -webkit-transition-delay: 0s, 0s;
+        -moz-transition-delay: 0s, 0s;
+        transition-delay: 0s, 0s;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+
+        &:hover {
+            cursor: pointer;
+
+            &:before {
+                border-color: @border_color_1;
+            }
+
+            &:after {
+                border-left-color: @border_left_color_1;
+            }
+        }
+
+        &:before {
+            // content: '';
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // width: 80px;
+            // height: 80px;
+            // margin: -40px 0 0 -40px;
+            // border: 5px solid #fff;
+            // border-radius: 100%;
+            // -webkit-transition: border-color 300ms;
+            // -moz-transition: border-color 300ms;
+            // transition: border-color 300ms;
+        }
+
+        &:after {
+            // content: '';
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // width: 0;
+            // height: 0;
+            // margin: -20px 0 0 -10px;
+            // border-left: 40px solid #fff;
+            // border-top: 25px solid transparent;
+            // border-bottom: 25px solid transparent;
+            // -webkit-transition: border-color 300ms;
+            // -moz-transition: border-color 300ms;
+            // transition: border-color 300ms;
+        }
+
+        &:focus {
+            &:before {
+                border-color: @border_color_1;
+            }
+
+            &:after {
+                border-left-color: @border_left_color_1;
+            }
+        }
+    }
+
+    .videoWrapperActive {
+
+        .videoPoster,
+        .video-play-icon {
+            opacity: 0;
+            height: 0;
+            -webkit-transition-delay: 0s, 800ms;
+            -moz-transition-delay: 0s, 800ms;
+            transition-delay: 0s, 800ms;
+        }
+    }
+
+    .video-cover {
+        position: relative;
+
+        video {
+            max-width: 100%;
+        }
+
+        iframe {
+            background: #252525;
+            width: auto !important;
+            height: auto !important;
+        }
+
+        .background-image-holder {
+            z-index: 3;
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+            -moz-transition: 0.3s linear;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+            -moz-transition: 0.3s linear;
+        }
+    }
+
+    .video-cover.reveal-video {
+        .video-play-icon {
+            opacity: 0 !important;
+            pointer-events: none;
+        }
+
+        .background-image-holder {
+            opacity: 0 !important;
+            pointer-events: none;
+        }
+    }
+
+    .video-cover[data-scrim-bottom] {
+        &:before {
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+            -moz-transition: 0.3s linear;
+            z-index: 4;
+        }
+    }
+
+    .video-cover[data-overlay] {
+        &:before {
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+            -moz-transition: 0.3s linear;
+            z-index: 4;
+        }
+    }
+
+    .video-cover[data-scrim-top] {
+        &:before {
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+            -moz-transition: 0.3s linear;
+            z-index: 4;
+        }
+    }
+
+    .video-cover.reveal-video[data-scrim-bottom] {
+        &:before {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .video-cover.reveal-video[data-overlay] {
+        &:before {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .video-cover.reveal-video[data-scrim-top] {
+        &:before {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .video-play-icon {
+        width: 100px;
+        height: 50px;
+        position: relative;
+        z-index: 4;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transition: .3s linear;
+        -webkit-transition: .3s linear;
+        -moz-transition: .3s linear;
+        background-image: linear-gradient(180deg, #00A5DB 0%, #006CB4 100%);
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.50);
+        border-radius: 6px;
+
+        &:before {
+            border-color: transparent transparent transparent #252525;
+            margin-top: -3px;
+            position: absolute;
+            top: 50%;
+            margin-top: -5px;
+            left: 50%;
+            margin-left: -4px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 12px;
+            border-color: transparent transparent transparent #ffffff;
+            border-color: transparent transparent transparent #fff;
+        }
+    }
+
+    .video-play-icon.video-play-icon--sm {
+        width: 3.71428571em;
+        height: 3.71428571em;
+
+        &:before {
+            border-width: 4px 0 4px 9px;
+        }
+    }
+
+    .video-play-icon.video-play-icon--xs {
+        width: 1.85714286em;
+        height: 1.85714286em;
+
+        &:before {
+            border-width: 3px 0 3px 6px;
+            margin-left: -3px;
+        }
+    }
+
+    .video-play-icon.bg--primary {
+        &:before {
+            border-color: @border_color_1;
+        }
+    }
+
+    .video-play-icon.video-play-icon--dark {
+        border-color: @border_color_3;
+        background: #252525;
+
+        &:before {
+            border-color: @border_color_4;
+            border-color: @border_color_1;
+        }
+    }
+
+
+
+
+
+}

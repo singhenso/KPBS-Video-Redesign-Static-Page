@@ -1,0 +1,78 @@
+@import "src/less/global/base_buttons.less"; 
+
+/* 
+=====================================================================
+KPBS Steps
+src/blocks/passport-steps.html
+=====================================================================
+*/
+.passport-steps {
+    padding: 60px 15px;
+    text-align: center;
+    background-color: #FAFAFA;
+
+    &__container {}
+
+    &__body {}
+
+    &__items-wrapper {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns:4fr 1fr 4fr 1fr 4fr;
+    }
+
+    &__single {}
+
+    &__svg {}
+
+    &__text {
+        span {
+            background-color: @btn-purple;
+            color: #fff;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 50px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        a {
+            color: @btn-purple;
+            font-size: 14px;
+
+            svg {
+                height: 10px;
+            }
+        }
+
+        p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {}
+
+@media (max-width: 768px) {
+    .passport-steps {
+        padding: 40px 15px;
+        text-align: center;
+
+        &__items-wrapper {
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+            margin-top: 30px;
+        }
+
+        &__arrow {
+            transform: rotate(90deg);
+            /* Equal to rotateZ(45deg) */
+            margin: 20px 0;
+        }
+
+    }
+}
+
+@media (max-width: 475px) {}

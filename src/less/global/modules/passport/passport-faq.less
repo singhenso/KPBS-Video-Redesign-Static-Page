@@ -1,0 +1,76 @@
+/* 
+=====================================================================
+Passport FAQ
+=====================================================================
+*/
+.passport-container {
+@import "src/less/global/base_buttons.less"; 
+}
+.pp-faq {
+  margin: 60px 0;
+  padding: 0 15px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__item__content-wrapper {
+    font-size: 16px;
+    line-height: 16px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+  }
+
+  &__item__title {
+    border-top: 1px solid rgba(200, 200, 200, .4);
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 0 0 0;
+    position: relative;
+    margin-bottom: 0;
+    transition: all 0.25s ease-out;
+  }
+
+  &__item__title::after {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    content: " ";
+    display: inline-block;
+    float: right;
+    height: 10px;
+    left: 2px;
+    position: relative;
+    right: 20px;
+    top: 2px;
+    transform: rotate(135deg);
+    transition: 0.35s ease-in-out;
+    vertical-align: top;
+    width: 10px;
+  }
+
+  /* OPTIONAL HOVER STATE */
+  &__item__title:hover {
+    color: #4E4B52;
+  }
+
+  &__item__trigger:checked+&__item__title+&__item__content-wrapper {
+    max-height: 350px;
+  }
+
+  &__item__trigger:checked+&__item__title::after {
+    transform: rotate(-45deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+}

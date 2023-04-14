@@ -1,0 +1,77 @@
+/* 
+=====================================================================
+Events
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+
+
+
+.producer-events {
+    background-color: #fff;
+    padding: 60px 20px;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    &__cta {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        background: #FFFFFF;
+        border: 1px solid #ECECEC;
+        border-radius: 6px;
+
+        .max-width-mixin(@tablet; {
+                display: flex;
+                border-radius: 6px;
+                flex-direction: column-reverse;
+            });
+
+        &__image {
+            img {
+                width: 100%;
+
+                .max-width-mixin(@tablet; {
+                        margin: 0 auto;
+                        max-width: 300px;
+                    });
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__text {
+            padding: 40px;
+
+            .max-width-mixin(@tablet; {
+                    padding: 40px 20px;
+                });
+
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:last-of-type {
+                        margin-bottom: 0px;
+                    }
+
+                    svg {
+                        min-width: 20px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producers Club Static Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <!-- original KPBS CSS from site -->
+    <link rel="stylesheet" href="@@webRoot/css/style.css">
+    <link rel="stylesheet" href="@@webRoot/css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,500" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- 
+            Producer-title-banner.html: 
+            data-less-file="passport-title-banner.less" 
+        -->
+    @@include('src/blocks/producer-title-banner.html')
+    <!-- 
+            Producer-hero.html: 
+            data-less-file="passport-hero.less" 
+        -->
+    @@include('src/blocks/producer-hero.html')
+    <!-- 
+            Producer-giving.html: 
+            data-less-file="passport-giving.less" 
+        -->
+    @@include('src/blocks/producer-giving.html')
+    <!-- 
+            producer-events.html: 
+            data-less-file="passport-hero.less" 
+        -->
+    @@include('src/blocks/producer-events.html')
+    <!-- 
+            producer-facebook.html: 
+            data-less-file="passport-facebook.less" 
+        -->
+    @@include('src/blocks/producer-facebook.html')
+    <!-- 
+            producer-testimonial.html: 
+            data-less-file="passport-testimonial.less" 
+        -->
+    @@include('src/blocks/producer-testimonial.html')
+    <!-- 
+            producer-engaged.html: 
+            data-less-file="passport-engaged.less" 
+        -->
+    @@include('src/blocks/producer-engaged.html')
+    <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
+    <script src="@@webRoot/dist/js/main.min.js"></script>
+</body>
+
+</html>

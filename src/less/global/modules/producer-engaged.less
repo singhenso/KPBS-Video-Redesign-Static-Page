@@ -1,0 +1,163 @@
+/* 
+=====================================================================
+Stay Engaged Section
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+@import "src/less/global/modules/producer-giving.less";
+
+
+.producer-engaged {
+    background-color: @grey-bg;
+    padding: 60px 20px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    &__news {
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            .max-width-mixin(@tablet; {
+                grid-template-columns: 1fr 1fr;
+            });
+            .max-width-mixin(@mobile; {
+                grid-template-columns: 1fr;
+            });
+            li {
+
+                background: #FFFFFF;
+                border: 1px solid #ECECEC;
+                border-radius: 6px;
+                padding: 20px;
+
+                a {
+                    color: @primary-blue;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    justify-content: space-between;
+                    font-weight: 700;
+
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+            }
+        }
+
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+    }
+
+    &__contact {
+        >ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            .max-width-mixin(@tablet; {
+                grid-template-columns: 1fr 1fr;
+            });
+            .max-width-mixin(@mobile; {
+                grid-template-columns: 1fr;
+            });
+
+            >li {
+                background: #FFFFFF;
+                border: 1px solid #ECECEC;
+                border-radius: 6px;
+                padding: 20px;
+
+                span {
+                    font-weight: 700;
+                    display: block;
+                }
+
+                a.arrow-btn {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .col {
+                    margin-bottom: 15px;
+
+                    &:last-of-type {
+                        margin-bottom: none;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 20px;
+    }
+
+    &__cta {
+        border-bottom: 1px solid #cecece;
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+    }
+
+
+    &__give {
+
+        >ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+            .max-width-mixin(@tablet; {
+                grid-template-columns: 1fr 1fr;
+            });
+            .max-width-mixin(@mobile; {
+                grid-template-columns: 1fr;
+            });
+
+            >li {
+                background: #FFFFFF;
+                border: 1px solid #ECECEC;
+                border-radius: 6px;
+                padding: 20px;
+
+                span {
+                    font-weight: 700;
+                    display: block;
+                }
+
+                a.pc-link {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    font-weight: 300;
+                    color:#545454;
+
+                    svg {
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 5px;
+                    }
+                }
+
+                .col {
+                    margin-bottom: 15px;
+
+                    &:last-of-type {
+                        margin-bottom: none;
+                    }
+                }
+            }
+        }
+
+        margin-bottom: 20px;
+
+    }
+}

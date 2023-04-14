@@ -1,0 +1,42 @@
+/* 
+=====================================================================
+Facebook Banner
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+
+
+.producer-facebook {
+
+    background: linear-gradient(180deg, #0296DD 0%, #00ADAC 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 60px 20px;
+    text-align: center;
+
+    h3 {
+        font-size: 30px;
+        text-align: center;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            svg:hover {
+                box-shadow: none;
+            }
+            &:hover {
+                svg {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+}

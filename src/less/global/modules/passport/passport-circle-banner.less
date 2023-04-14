@@ -1,0 +1,221 @@
+/* 
+=====================================================================
+Passport Circle Banner
+=====================================================================
+*/
+/* =========== STARTbase remove kpbs stlye.css elements ===========*/
+@import "src/less/global/base_buttons.less"; 
+.passport-container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+
+
+/* =========== END base remove kpbs stlye.css elements ===========*/
+@primary-purple: #0B135C;
+@btn-border: 1px solid #2638C4;
+@btn-purple: #2638C4;
+@text-blue: #2638C4;
+@primary-purple-gradient: radial-gradient(55em 60em at -97% 50%, #0B135C 50%, transparent 50%);
+@primary-grey-bg: #FAFAFA;
+@min-height: 440px;
+@circle-width: 400px;
+@overlay: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
+
+/* 
+=====================================================================
+button block
+=====================================================================
+*/
+.arrow-btn {
+    border-radius: 50px;
+    background-clip: padding-box;
+    font-size: 1.125em;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 25px;
+    border: @btn-border;
+    background-color: #fff;
+    box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    cursor: pointer;
+    a {
+        cursor: pointer;
+    }
+
+    svg {
+        position: relative;
+        transition: right 0.2s ease 0s;
+        right: 4px;
+    }
+
+    &:hover {
+        box-shadow: -1px 6px 10px 0 rgba(120, 60, 20, .2);
+        color: #fff;
+
+
+        svg {
+            right: 0px;
+            position: relative;
+        }
+    }
+
+    svg {
+        width: 20px;
+        margin-left: 5px;
+    }
+
+    &.white-arrow-btn {
+        background-color: #fff;
+        color: @text-blue;
+    }
+
+    &.purple-arrow-btn {
+        background-color: @btn-purple;
+        color: #fff;
+        border: none;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+    &.transparent-arrow-btn {
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+
+        svg {
+            path {
+                fill: #fff;
+            }
+        }
+    }
+}
+.passport-circle-banner {
+    background-color: @primary-purple;
+    display: flex;
+    height: 368px;
+    overflow: hidden;
+    color: #fff;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 30px 0 20px;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__image {
+        width: 100%;
+        background-position: initial;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://cdn.kpbs.org/e6/bc/33f4a9aa4b36aeeeb77a2831eff6/passport-image.jpg);
+        height: @min-height;
+        box-shadow: @overlay;
+        min-width: 500px;
+        height: auto;
+        border-radius: 0;
+        clip-path: circle(67% at 40% 50%);
+
+    }
+
+    &__checklist {
+        ul {
+            padding: 0 0 15px 0;
+            font-size: 14px;
+            margin-bottom: 20px;
+
+            li {
+                margin-bottom: 15px;
+                display: flex;
+
+                svg {
+                    margin-right: 5px;
+                    height: 10px;
+                    top: 2px;
+                    position: relative;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding:0;
+                }
+            }
+        }
+
+        p {
+            margin: 16px 0;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .passport-circle-banner {
+        &__image {
+            -webkit-clip-path: circle(67% at 20% 50%);
+            clip-path: circle(67% at 20% 50%);
+            min-width: unset;
+        }
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 600px) {
+    .passport-circle-banner {
+        &__image {
+            -webkit-clip-path: circle(67% at -10% 50%);
+            clip-path: circle(67% at -10% 50%);
+            min-width: unset;
+        }
+    }
+}
+
+@media (max-width: 600px) {}
+
+@media (max-width: 475px) {
+    .passport-circle-banner {
+        background-color: #0b135c;
+        display: flex;
+        height: unset;
+        overflow: unset;
+        color: #fff;
+        flex-direction: column;
+
+        &__image {
+            display: none;
+        }
+    }
+
+
+    .passport-circle-banner {
+        &__content {
+            display: flex;
+            padding: 40px 15px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
