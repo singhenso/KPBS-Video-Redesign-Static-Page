@@ -1,5 +1,5 @@
 
-# KPBS Producers Club Static Page
+# KPBS Video Redesign Static Page
 
 
 ---
