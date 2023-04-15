@@ -1,0 +1,144 @@
+/*
+=====================================================================
+Video Hero Subpage
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+/*
+=====================================================================
+Video Hero
+=====================================================================
+*/
+@import "src/less/global/base_buttons.less";
+
+
+.video-hero-subpage {
+    padding: 60px 20px;
+    background-image: linear-gradient(180deg, #373737 0%, #161616 100%);
+    color: #fff;
+    z-index: 1;
+
+    .max-width-mixin(@tablet; {
+            padding: 30px 20px;
+        });
+
+    &-wrapper {
+        max-width: 1240px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 30px;
+        margin: 0 auto;
+
+        .max-width-mixin(@tablet; {
+                grid-template-columns: 1fr;
+                grid-gap: 0px;
+            });
+    }
+
+    &-main {
+
+        z-index: 1;
+        position: relative;
+
+        &-header {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-bottom: 20px;
+
+            p {
+                margin: 0 0 0 15px;
+            }
+        }
+
+        &-body {
+            &-link {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+
+                &:hover svg g#circle {
+                    fill: #fff;
+                    transition: fill 0.3s ease-in-out;
+
+                    polygon#arrow {
+                        fill: #000;
+                        transition: fill 0.2s ease-in-out;
+                    }
+
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    z-index: 2;
+                }
+
+                img {
+                    display: block;
+                    z-index: 0;
+                    position: relative;
+                    mix-blend-mode: multiply;
+                    width: 100%;
+                }
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 3;
+                }
+            }
+
+
+
+
+        }
+    }
+
+    &-side {
+        &-content {
+            &-time {
+                display: flex;
+                flex-direction: row;
+                gap: 7px;
+                align-items: center;
+
+                a {
+                    color: #6AB1ED;
+                    font-weight: 700;
+                }
+            }
+
+            h3 {
+                font-size: 30px;
+
+                .max-width-mixin(@tablet; {
+                        font-size: 24px;
+                    });
+
+                .max-width-mixin(@mobile; {
+                        font-size: 20px;
+                    });
+            }
+            &-links {
+                ul {
+                    list-style: none;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    li {
+
+                    }
+                }
+            }
+
+        }
+    }
+}
